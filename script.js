@@ -48,7 +48,6 @@ navLinks.forEach(link => {
 
 // Hero section animations
 const heroText = document.querySelector('.hero-text');
-const heroImage = document.querySelector('.hero-image');
     
 if (heroText) {
     heroText.classList.add('slide-in-left');
@@ -57,13 +56,6 @@ if (heroText) {
     }, 100);
 }
     
-if (heroImage) {
-    heroImage.classList.add('slide-in-right');
-    setTimeout(() => {
-        heroImage.classList.add('visible');
-    }, 100);
-}
-
 // Typing effect for hero name
 function typeWriter(element, text, speed = 100) {
     let i = 0;

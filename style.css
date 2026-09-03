@@ -45,24 +45,6 @@ input, textarea, .form-control {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="8" y1="24" x2="24" y2="8" stroke="%23FF9D00" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="16" r="2" fill="%23FF9D00"/></svg>') 16 16, text;
 }
 
-@keyframes complexGradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    25% {
-        background-position: 100% 50%;
-    }
-    50% {
-        background-position: 50% 100%;
-    }
-    75% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-
 /* Advanced background animations */
 .bg-animation {
     position: fixed;
@@ -632,14 +614,7 @@ section::before {
     animation: heroGradient 8s ease-in-out infinite;
 }
 
-@keyframes heroGradient {
-    0%, 100% {
-        background: linear-gradient(135deg, #FF9D00 0%, #FFB84D 100%);
-    }
-    50% {
-        background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
-    }
-}
+
 
 .hero::before {
     content: '';
@@ -1127,33 +1102,12 @@ section::before {
     }
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.1);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(255, 0, 0, 0.3);
-    }
-    100% {
-        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.1);
-    }
-}
-
 .hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: imageFloat 3s ease-in-out infinite;
 }
 
-@keyframes imageFloat {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
 
 .profile-card {
     background: rgba(255, 255, 255, 0.1);
@@ -1163,34 +1117,67 @@ section::before {
     text-align: center;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: cardGlow 4s ease-in-out infinite, cardRotate 20s linear infinite;
-}
-
-@keyframes cardRotate {
-    0% {
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    50% {
-        transform: perspective(1000px) rotateY(5deg);
-    }
-    100% {
-        transform: perspective(1000px) rotateY(0deg);
-    }
-}
-
-@keyframes cardGlow {
-    0%, 100% {
-        box-shadow: 0 8px 32px rgba(255, 157, 0, 0.2);
-    }
-    50% {
-        box-shadow: 0 8px 40px rgba(255, 157, 0, 0.4);
-    }
 }
 
 .profile-card:hover {
-    transform: translateY(-15px) scale(1.05) perspective(1000px) rotateY(10deg);
-    box-shadow: 0 30px 80px rgba(255, 157, 0, 0.6);
+    box-shadow: 0 10px 10px rgba(255, 157, 0, 0.1);
     background: rgba(255, 255, 255, 0.15);
+}
+
+.skill-progress-card {
+    width: min(100%, 440px);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    background: rgba(135, 206, 235, 0.25);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.skill-progress-header,
+.skill-progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-progress-header {
+    margin-bottom: 1.75rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.skill-progress-header i {
+    color: #FFB84D;
+}
+
+.skill-progress-list {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.skill-progress-label {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.skill-progress-label span:last-child {
+    color: #FFB84D;
+    font-weight: 600;
+}
+
+.skill-progress-track {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(249, 1, 1, 0.2);
+}
+
+.skill-progress-track span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #FF9D00, #FFB84D);
 }
 
 .profile-image {
@@ -1201,18 +1188,6 @@ section::before {
     overflow: hidden;
     border: 4px solid rgba(255, 255, 255, 0.3);
     position: relative;
-    animation: imagePulse 3s ease-in-out infinite;
-}
-
-@keyframes imagePulse {
-    0%, 100% {
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 0 20px rgba(255, 157, 0, 0.3);
-    }
-    50% {
-        border-color: rgba(255, 157, 0, 0.6);
-        box-shadow: 0 0 40px rgba(255, 157, 0, 0.6);
-    }
 }
 
 .profile-image img {
@@ -1660,35 +1635,11 @@ section::before {
     text-align: center;
 }
 
-@keyframes cardMorph {
-    0%, 100% {
-        border-radius: 20px;
-        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    }
-    25% {
-        border-radius: 25px;
-        transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
-    }
-    50% {
-        border-radius: 15px;
-        transform: perspective(1000px) rotateX(-2deg) rotateY(-2deg);
-    }
-    75% {
-        border-radius: 22px;
-        transform: perspective(1000px) rotateX(1deg) rotateY(-1deg);
-    }
-}
-
 .project-card:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 20px 40px rgba(255, 157, 0, 0.3);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-@keyframes projectCardFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
 }
 
 .project-card:hover .project-icon {
@@ -1875,45 +1826,6 @@ section::before {
 .skills-contact-bg .container {
     position: relative;
     z-index: 1;
-}
-
-@keyframes orbitRotate {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@keyframes planetOrbit {
-    0% {
-        transform: translateX(-220px) translateY(-14px) rotate(0deg);
-    }
-    25% {
-        transform: translateX(-95px) translateY(10px) rotate(90deg);
-    }
-    50% {
-        transform: translateX(0) translateY(0) rotate(180deg);
-    }
-    75% {
-        transform: translateX(120px) translateY(-10px) rotate(270deg);
-    }
-    100% {
-        transform: translateX(220px) translateY(14px) rotate(360deg);
-    }
-}
-
-@keyframes solarDrift {
-    0% {
-        background-position: 50% 50%, 18% 68%, 82% 28%, 78% 74%, 26% 30%, 0 0;
-    }
-    50% {
-        background-position: 50% 50%, 24% 64%, 76% 34%, 72% 68%, 31% 36%, 0 0;
-    }
-    100% {
-        background-position: 50% 50%, 18% 68%, 82% 28%, 78% 74%, 26% 30%, 0 0;
-    }
 }
 
 .skills-line {
@@ -2594,43 +2506,22 @@ section::before {
 /* View More Button Design with Animations */
 #viewMoreBtn {
     background: linear-gradient(135deg, #FFAE2F, #FF8C00, #FF6B00);
-    background-size: 300% 300%;
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: 40px;
-    padding: 8px 45px;
-    width: 50%;
-    font-size: 1.3rem;
+    padding: 8px 40px;
+    width: auto;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 12px 35px rgba(255, 174, 47, 0.5);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
     margin-top: 30px;
     animation: gradientShift 3s ease-in-out infinite, breathe 2s ease-in-out infinite;
 }
 
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 #viewMoreBtn:hover {
-    background: linear-gradient(135deg, #FF6B00, #FF8C00, #FFAE2F);
-    transform: translateY(-8px) scale(1.15);
+    transform: translateY(-8px) scale(1);
     box-shadow: 0 25px 60px rgba(255, 174, 47, 0.6);
     border-color: rgba(255, 255, 255, 0.6);
     animation: none;
@@ -2638,12 +2529,6 @@ section::before {
 
 #viewMoreBtn:hover::before {
     left: 100%;
-}
-
-#viewMoreBtn:hover::after {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
 }
 
 #viewMoreBtn:active {

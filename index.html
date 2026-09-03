@@ -113,21 +113,33 @@
                     <h2 class="hero-subtitle">Web Developer</h2>
                     <p class="hero-tagline">I build responsive and modern websites.</p>
                     <div class="hero-buttons">
-                        <a href="image/AbhishekYadav-CV.pdf" download class="banner-btn">Download Resume</a>
+                        <a href="image/My-Resume.pdf" download class="banner-btn">Download Resume</a>
                         <a href="https://wa.me/917275787029" class="banner-btn">Get In Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="profile-card">
-                        <div class="profile-image">
-                            <img src="image/photo.jpg" alt="Abhishek Yadav" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="profile-placeholder">
-                                <i class="fas fa-user"></i>
-                            </div>
+                    <div class="skill-progress-card">
+                        <div class="skill-progress-header">
+                            <span>Core Skills</span>
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
                         </div>
-                        <div class="profile-info">
-                            <h3>Abhishek Yadav</h3>
-                            <p>Web Developer</p>
+                        <div class="skill-progress-list">
+                            <div class="skill-progress-item">
+                                <div class="skill-progress-label"><span>HTML &amp; CSS</span><span class="text-white">90%</span></div>
+                                <div class="skill-progress-track"><span style="width: 90%"></span></div>
+                            </div>
+                            <div class="skill-progress-item">
+                                <div class="skill-progress-label"><span>JavaScript</span><span class="text-white">50%</span></div>
+                                <div class="skill-progress-track"><span style="width: 50%"></span></div>
+                            </div>
+                            <div class="skill-progress-item">
+                                <div class="skill-progress-label"><span>React JS</span><span class="text-white">40%</span></div>
+                                <div class="skill-progress-track"><span style="width: 40%"></span></div>
+                            </div>
+                            <div class="skill-progress-item">
+                                <div class="skill-progress-label"><span>PHP &amp; MySQL</span><span class="text-white">40%</span></div>
+                                <div class="skill-progress-track"><span style="width: 40%"></span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,19 +153,26 @@
         </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about-me" class="about-me">
-        
-    </section>
 
     <!-- About Section -->
     <section id="about" class="about py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="about-me-image text-center">
-                        <img src="image/photo.jpg" alt="Abhishek Yadav" class="about-me-img img-fluid rounded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="image/photo.jpg" alt="Abhishek Yadav" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="profile-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Abhishek Yadav</h3>
+                            <p>Web Developer</p>
+                        </div>
                     </div>
+                </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="about-me-content">
@@ -225,13 +244,37 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects py-5">
+    <section id="projects" class="projects  pt-5">
        
         <div class="container">
             <div class="section-header text-center mb-5">
                 <h2 class="section-title">My Projects</h2>
             </div>
             <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Codex tech Solutions</h3>
+                        <p class="project-language">Language: React,HTML,CSS,bootstrap</p>
+                        <a href="https://codextechsolutions.in/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Amorexim</h3>
+                        <p class="project-language">Language: HTML,CSS,bootstrap</p>
+                        <a href="https://amorexim.com/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                    </div>
+                </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="project-card">
                         <div class="project-icon">
@@ -256,7 +299,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 more-projects d-none">
                     <div class="project-card">
                         <div class="project-icon">
                             <i class="fas fa-video"></i>
@@ -268,7 +311,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3 more-projects d-none">
                     <div class="project-card">
                         <div class="project-icon">
                             <i class="fas fa-paint-brush"></i>
@@ -453,7 +496,7 @@
                     </div>
                 </div>
                 </div>
-               <button id="viewMoreBtn" class="btn btn-danger px-4 d-block mx-auto mt-4">View More</button>
+               <button id="viewMoreBtn" class="btn btn-danger d-block mx-auto">View More</button>
             </div>
         </div>
     </section>
@@ -626,8 +669,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3 class="contact-card-title">Location</h3>
-                        <p class="contact-card-info">Jaunpur, Uttar Pradesh, India</p>
-                        <a href="https://maps.google.com/?q=Jaunpur,Uttar+Pradesh,India" target="_blank" class="contact-card-link">View Map</a>
+                        <p class="contact-card-info">Mumbai, Maharashtra, India</p>
+                        <a href="https://maps.google.com/?q=Mumbai,Maharashtra,India" target="_blank" class="contact-card-link">View Map</a>
                     </div>
                 </div>
             </div>
