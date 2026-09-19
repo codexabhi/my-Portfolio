@@ -327,7 +327,6 @@ input, textarea, .form-control {
     z-index: 1000;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 0.5rem 0;
     animation: slideDown 0.8s ease-out;
 }
 
@@ -345,7 +344,7 @@ input, textarea, .form-control {
 /* Bootstrap container handles this */
 
 .logo-image {
-    height: 60px;
+    height: 70px;
     border-radius: 5px;
     width: auto;
     object-fit: contain;
